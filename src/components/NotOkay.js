@@ -6,7 +6,7 @@ class NotOkay extends Component {
 
     return (
       <div className="NotOkay">
-        Alright
+        Form has been submitted
       </div>
     );
   }

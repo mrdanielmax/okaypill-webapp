@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import '../css/Okay.css';
-import Cookies from 'universal-cookie';
-
-const cookies = new Cookies();
 
 class Okay extends Component {
   constructor (props) {
@@ -19,13 +16,9 @@ class Okay extends Component {
     this.setState({
         inputvalue: event.target.value
     })
-
-    console.log(event.target.value);
   }
 
   handleSubmit (event) {
-    console.log('Form value: ' + this.state.inputvalue);
-    cookies.set('visited', 'true', { path: '/' });
     event.preventDefault();
   }
 
@@ -36,7 +29,7 @@ class Okay extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>Email:</label>
           <input type="email" name="email" placeholder="email address" value={this.state.inputvalue} onChange={this.handleChange}/>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit"  onClick = {this.props.emailSubmitted}/>
         </form>
       </div>
     );

@@ -7,21 +7,31 @@ import NotOkay from './NotOkay';
 const cookies = new Cookies();
 
 class Main extends Component {
-  //
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { MainPage : 'okay'};
-  // }
+
+  constructor(props) {
+    super(props);
+    const initCookieState = cookies.get('visited');
+    this.state = { MainPage : initCookieState };
+    this.emailSubmitted = this.emailSubmitted.bind(this)
+  }
+
+  emailSubmitted(e){
+    cookies.set('visited', 'visited', { path: '/' });
+    e.preventDefault()
+    this.setState({
+      MainPage: "visited"
+    })
+  }
 
   render() {
-
-    if(cookies.get('visited')){
+    console.log(this.state.MainPage);
+    if(this.state.MainPage === "visited"){
       return (
         <NotOkay/>
       );
     } else {
       return (
-        <Okay/>
+        <Okay emailSubmitted={this.emailSubmitted}/>
       );
     }
   }
