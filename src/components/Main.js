@@ -16,7 +16,7 @@ class Main extends Component {
   }
 
   emailSubmitted(e){
-    cookies.set('visited', 'visited', { path: '/' });
+    // cookies.set('visited', 'visited', { path: '/' });
     e.preventDefault()
     this.setState({
       MainPage: "visited"
@@ -24,7 +24,6 @@ class Main extends Component {
   }
 
   render() {
-    console.log(this.state.MainPage);
     if(this.state.MainPage === "visited"){
       return (
         <NotOkay/>
