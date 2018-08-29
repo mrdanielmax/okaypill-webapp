@@ -1,17 +1,54 @@
 .Okay{
   width:100%;
+  box-sizing: border-box;
+  font-family: base-mono-narrow, monospace;
+  font-style: normal;
+
 }
 
 .OkayPersonImage{
   width:95%;
+  height:10px;
+}
+
+.OkayColImg{
+  border:3px solid black;
+}
+
+.OkayShirtImage{
+  width:100%;
+  height:100%;
+  /* padding:3%; */
+}
+
+.OkayColumn {
+    float: left;
+    width: 33.33%;
+    font-size:1.7em;
+    text-align: center;
+    /* padding:3%; */
+}
+
+.OkayColumnInner{
+  width:80%;
+  margin:0 auto;
+}
+
+.OkayRow:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 p.OkayBig{
-  font-family: base-mono-narrow, monospace;
-  font-style: normal;
   font-weight: 400;
-  font-size:4em;
-
+  font-size:5em;
   text-transform: uppercase;
 
+}
+
+@media screen and (max-width: 600px) {
+    .OkayColumn {
+        width: 100%;
+    }
 }

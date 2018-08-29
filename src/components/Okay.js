@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Okay.css';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import OkayPerson from "../images/okay_person.jpg"
+import BlankShirt from "../images/blank_shirt.png"
 
 // a basic form
 const CustomForm = ({ status, message, onValidated }) => {
@@ -97,8 +98,40 @@ class Okay extends Component {
 
     return (
       <div className="Okay">
+
         <img className='OkayPersonImage' alt='Okay Pill' src={OkayPerson} />
-        <p className="OkayBig">Take your Okay Pill</p>
+          <div className="OkayRow">
+          <div className="OkayColumn">
+            <div className="OkayColumnInner">
+              Happy Pill
+              <div className="OkayColImg">
+                <img className='OkayShirtImage' alt='Okay Pill' src={BlankShirt} />
+              </div>
+              You will never be done popping.
+            </div>
+          </div>
+            <div className="OkayColumn">
+              <div className="OkayColumnInner">
+                Happy Pill
+                <div className="OkayColImg">
+                  <img className='OkayShirtImage' alt='Okay Pill' src={BlankShirt} />
+                </div>
+                You will never be done popping.
+              </div>
+            </div>
+            <div className="OkayColumn">
+              <div className="OkayColumnInner">
+                Happy Pill
+                <div className="OkayColImg">
+                  <img className='OkayShirtImage' alt='Okay Pill' src={BlankShirt} />
+                </div>
+                You will never be done popping.
+              </div>
+            </div>
+          </div>
+
+          <p className="OkayBig">Take your Okay Pill</p>
+
 
           <MailchimpSubscribe
            url={url}
