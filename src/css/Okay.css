@@ -1,0 +1,17 @@
+.Okay{
+  width:100%;
+}
+
+.OkayPersonImage{
+  width:95%;
+}
+
+p.OkayBig{
+  font-family: base-mono-narrow, monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size:4em;
+
+  text-transform: uppercase;
+
+}

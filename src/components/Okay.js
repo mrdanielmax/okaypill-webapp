@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/Okay.css';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
+import OkayPerson from "../images/okay_person.jpg"
 
 // a basic form
 const CustomForm = ({ status, message, onValidated }) => {
@@ -96,6 +97,9 @@ class Okay extends Component {
 
     return (
       <div className="Okay">
+        <img className='OkayPersonImage' alt='Okay Pill' src={OkayPerson} />
+        <p className="OkayBig">Take your Okay Pill</p>
+
           <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (
