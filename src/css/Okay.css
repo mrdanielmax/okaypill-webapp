@@ -4,11 +4,13 @@
   font-family: base-mono-narrow, monospace;
   font-style: normal;
 
+  color:white;
+  background-color: black;
 }
 
 .OkayPersonImage{
   width:95%;
-  height:10px;
+  /* height:10px; */
 }
 
 .OkayColImg{
@@ -18,6 +20,8 @@
 .OkayShirtImage{
   width:100%;
   height:100%;
+  background-color:white;
+  
   /* padding:3%; */
 }
 

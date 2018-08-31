@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/Okay.css';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
-import OkayPerson from "../images/okay_person.jpg"
+import OkayPerson from "../images/okay_person.JPG"
 import BlankShirt from "../images/blank_shirt.png"
 
 // a basic form
@@ -103,20 +103,20 @@ class Okay extends Component {
           <div className="OkayRow">
           <div className="OkayColumn">
             <div className="OkayColumnInner">
-              Happy Pill
+              Calm Pill
               <div className="OkayColImg">
                 <img className='OkayShirtImage' alt='Okay Pill' src={BlankShirt} />
               </div>
-              You will never be done popping.
+              The calm pill is for those who aren&#39;t anxious. Show the world that “not over thinking it” is enough. Model citizens are calm. Be chill, relaxed and calm. Take your calm pill.
             </div>
           </div>
             <div className="OkayColumn">
               <div className="OkayColumnInner">
-                Happy Pill
+                Okay Pill
                 <div className="OkayColImg">
                   <img className='OkayShirtImage' alt='Okay Pill' src={BlankShirt} />
                 </div>
-                You will never be done popping.
+                The okay pill is for those who aren&#39;t not okay. Show the world that “it could be worse” is true. Model citizens are okay. Be functional, responsible and okay. Take your okay pill.
               </div>
             </div>
             <div className="OkayColumn">
@@ -125,7 +125,7 @@ class Okay extends Component {
                 <div className="OkayColImg">
                   <img className='OkayShirtImage' alt='Okay Pill' src={BlankShirt} />
                 </div>
-                You will never be done popping.
+                The happy pill is for those who aren&#39;t depressed. Show the world that “getting out more” is enough. Model citizens are happy. Be carefree, lighthearted and happy. Take your happy pill.
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ class Okay extends Component {
            )}
          />
 
-
+         <p>Instagram</p>
       </div>
     );
 
