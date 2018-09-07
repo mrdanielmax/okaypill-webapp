@@ -16,7 +16,7 @@ class Main extends Component {
   }
 
   emailSubmitted(e){
-    // cookies.set('visited', 'visited', { path: '/' });
+    cookies.set('visited', 'visited', { path: '/' });
     e.preventDefault()
     this.setState({
       MainPage: "visited"

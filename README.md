@@ -9,3 +9,7 @@ See the readme for React [here](https://github.com/facebookincubator/create-reac
 TODO:
 - Move config read from component (Okay.js) to root
     use dotenv?
+
+- Originally, Okay and NotOkay were going to be very different. Since they're not, it would be best to abstract their layout into one file and have them display text that's fed in based on the cookie, instead of the way it's done now (two nearly identical files)
+
+- Remove Name from mailchimp form completely

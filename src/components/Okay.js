@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/Okay.css';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
-import OkayPerson from "../images/okay_person.JPG"
+import OkayPerson from "../images/okay_person2.jpg"
 import BlankShirt from "../images/blank_shirt.png"
 
 // a basic form
@@ -11,20 +11,15 @@ const CustomForm = ({ status, message, onValidated }) => {
     email &&
     name &&
     email.value.indexOf("@") > -1 &&
+    this.props.emailSubmitted() &&
     onValidated({
       EMAIL: email.value,
       NAME: name.value
     });
 
   return (
-    <div
-      style={{
-        background: "#efefef",
-        borderRadius: 2,
-        padding: 10,
-        display: "inline-block"
-      }}
-    >
+    <div className="MCForm">
+      <p className="MCFormTitle">Newsletter</p>
       {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
       {status === "error" && (
         <div
@@ -39,20 +34,16 @@ const CustomForm = ({ status, message, onValidated }) => {
         />
       )}
       <input
-        style={{ fontSize: "2em", padding: 5 }}
         ref={node => (name = node)}
-        type="text"
-        placeholder="Your name"
+        type="hidden"
       />
-      <br />
       <input
-        style={{ fontSize: "2em", padding: 5 }}
+        className="MCEmailText"
         ref={node => (email = node)}
         type="email"
         placeholder="Your email"
-      />
-      <br />
-      <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
+      /><br/>
+      <button className="MainButton" onClick={submit}>
         Submit
       </button>
     </div>
@@ -77,24 +68,14 @@ class Okay extends Component {
   }
 
   handleSubmit (event) {
+    console.log("hey");
+    this.props.emailSubmitted();
     event.preventDefault();
   }
 
   render() {
     const url =
      "https://okaypill.us19.list-manage.com/subscribe/post?u=09a07f9bbe279b6387b7eb31b&id=f33cce7358";
-
-    <MailchimpSubscribe
-      url={url}
-      render={({ subscribe, status, message }) => (
-        <CustomForm
-          status={status}
-          message={message}
-          onValidated={formData => subscribe(formData)}
-          onSubmit={this.handleSubmit}
-        />
-      )}
-    />
 
     return (
       <div className="Okay">
@@ -132,19 +113,35 @@ class Okay extends Component {
 
           <p className="OkayBig">Take your Okay Pill</p>
 
+          <div className="MissionSection">
+            <div className="MissionTitle">
+              Our Mission
+            </div>
+            <div className="MissionBody">
+              <p className="MissionText">Okay pill is dedicated to creating model citizens and maintaining order. Model citizens are responsible, functional and stable at all times. If you know anyone who suffers from anxiety, depression, or other unwanted emotions, recommend the okay pill or report them to us. We are constantly monitoring our customers at all times as we believe a state of constant observation is the key to an okay populace. </p>
 
-          <MailchimpSubscribe
-           url={url}
-           render={({ subscribe, status, message }) => (
-             <CustomForm
-               status={status}
-               message={message}
-               onValidated={formData => subscribe(formData)}
-             />
-           )}
-         />
+              <div className="OkayBottomSection">
+                <a href="https://www.kickstarter.com/" className="MainButton">Kickstarter</a><br/>
 
-         <p>Instagram</p>
+                <MailchimpSubscribe
+                 url={url}
+                 render={({ subscribe, status, message }) => (
+                   <CustomForm
+                     status={status}
+                     message={message}
+                     onValidated={formData => subscribe(formData)}
+                   />
+                 )}
+               />
+
+               <div className="instaIcon">
+                <a className="instaIconClass" href="https://www.instagram.com/okaypill/"><i className="fab fa-instagram fa-3x"></i></a>
+               </div>
+              </div>
+            </div>
+          </div>
+
+
       </div>
     );
 
