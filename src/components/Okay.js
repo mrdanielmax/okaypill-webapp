@@ -11,7 +11,6 @@ const CustomForm = ({ status, message, onValidated }) => {
     email &&
     name &&
     email.value.indexOf("@") > -1 &&
-    this.props.emailSubmitted() &&
     onValidated({
       EMAIL: email.value,
       NAME: name.value
@@ -140,8 +139,6 @@ class Okay extends Component {
               </div>
             </div>
           </div>
-
-
       </div>
     );
 
