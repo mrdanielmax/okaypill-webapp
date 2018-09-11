@@ -53,7 +53,7 @@ class NotOkay extends Component {
               <div className="OkayBottomSection">
                 <a href="https://www.kickstarter.com/" className="MainButton">Kickstarter</a>
 
-                <a href="https://mailchi.mp/4075fa860934/okaypill" target="_blank" className="MainButton" onClick = {() => { this.props.emailSubmitted() }}>Newsletter</a><br/>
+                <a href="https://mailchi.mp/4075fa860934/okaypill" target="_blank" className="MainButton" >Newsletter</a><br/>
 
                <div className="instaIcon">
                 <a className="instaIconClass" href="https://www.instagram.com/okaypill/"><i className="fab fa-instagram fa-3x"></i></a>
