@@ -1,6 +1,6 @@
 First version of the Okay Pill landing page.
 
-It will try to run on port 3002.
+Run `yarn start`. The app will try to run on port 3002.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
